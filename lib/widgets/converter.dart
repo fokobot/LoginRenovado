@@ -1,4 +1,5 @@
 import 'package:demo_app/models/converter.dart';
+import 'package:demo_app/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/widgets/binary2decimal.dart';
 import 'package:demo_app/widgets/decimal2binary.dart';
@@ -68,6 +69,21 @@ class Converter extends StatelessWidget {
                 onPressed: () =>
                     Provider.of<ConverterModel>(context, listen: false).reset(),
                 child: Text("Reset",
+                    style: new TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ))),
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(
+            padding: const EdgeInsets.all(8.0),
+            child: MaterialButton(
+                color: Color(int.parse("#0069C0".replaceAll('#', '0xff'))),
+                onPressed: () =>
+                    Provider.of<UserModel>(context, listen: false).signOut(),
+                child: Text("Cerrar Sesión",
                     style: new TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,

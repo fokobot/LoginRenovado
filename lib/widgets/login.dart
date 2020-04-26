@@ -24,7 +24,7 @@ class Login extends StatelessWidget {
       controller: controllerPassword,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Password",
+          hintText: "Contraseña",
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -36,7 +36,7 @@ class Login extends StatelessWidget {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () => Provider.of<UserModel>(context, listen: false).signIn(controllerEmail.value.text, controllerPassword.value.text),
-        child: Text("Login",
+        child: Text("Iniciar Sesión",
             textAlign: TextAlign.center,
             style: style.copyWith(
                 color: Colors.white, fontWeight: FontWeight.bold)),

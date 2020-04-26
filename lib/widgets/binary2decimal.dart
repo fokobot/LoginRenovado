@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 class BinaryToDecimal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 2,
+      flex: 3,
       child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
